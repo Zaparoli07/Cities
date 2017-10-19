@@ -1,6 +1,7 @@
 package com.example.zaparoli.cities;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -60,16 +61,16 @@ public class RegisterActivity extends AppCompatActivity {
 
                 if(TextUtils.isEmpty(email)){
                     //Email is Empty
-                    Toast.makeText(this, "Please enter Email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Informe seu E-mail", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if(TextUtils.isEmpty(password)){
                     //Password is Empty
-                    Toast.makeText(this, "Please enter Password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Informe sua Senha", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                progressDialog.setMessage("Registering User");
+                progressDialog.setMessage("Aguarde...");
                 progressDialog.show();
 
                 firebaseAuth.createUserWithEmailAndPassword(email, password)
@@ -77,11 +78,16 @@ public class RegisterActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Toast.makeText(RegisterActivity.this, "Registro Efetuado",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(RegisterActivity.this, "Registro Efetuado com Sucesso",Toast.LENGTH_SHORT).show();
+                                    progressDialog.dismiss();
+                                    Intent it = new Intent(RegisterActivity.this, MainActivity.class);
+                                    startActivity(it);
                                 }else{
-                                    Toast.makeText(RegisterActivity.this, "Registro Incorreto", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(RegisterActivity.this, "Falha no Cadastro", Toast.LENGTH_SHORT).show();
+                                    progressDialog.dismiss();
                                 }
                             }
                         });
+
             }
 }
