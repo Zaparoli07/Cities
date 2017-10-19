@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "662469923199",
+    "firebase_url": "https://cities-6855c.firebaseio.com",
+    "project_id": "cities-6855c",
+    "storage_bucket": "cities-6855c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662469923199:android:ae7d4e6316be0d2b",
+        "android_client_info": {
+          "package_name": "com.example.zaparoli.cities"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662469923199-4fhnlnp4n9icob4pvb7gvplh8hdqv1vp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zaparoli.cities",
+            "certificate_hash": "5c6e2e3161a0bae817964bfeba688256f4b04ac5"
+          }
+        },
+        {
+          "client_id": "662469923199-7tto3c5crhvhi26ldcjupa4jtamf1sbq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7zt92JOp4Vunm4sUq4KVjMfXVwNcMPmM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662469923199-7tto3c5crhvhi26ldcjupa4jtamf1sbq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

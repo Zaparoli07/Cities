@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zaparoli.cities.MainActivity">
+
+    <TextView
+        android:id="@+id/textViewLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="LOGIN"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewCPF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="Email"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextCPF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewCPF"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textViewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextCPF"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="Senha"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextCPF"
+        android:layout_alignStart="@+id/editTextCPF"
+        android:layout_below="@+id/textViewPassword"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/buttonEntrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewLogin"
+        android:layout_alignLeft="@+id/textViewLogin"
+        android:layout_alignRight="@+id/textViewLogin"
+        android:layout_alignStart="@+id/textViewLogin"
+        android:layout_below="@+id/editTextPassword"
+        android:layout_marginTop="45dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:onClick="Login"
+        android:text="Entrar"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/buttonEntrar"
+        android:layout_alignLeft="@+id/buttonEntrar"
+        android:layout_alignRight="@+id/buttonEntrar"
+        android:layout_alignStart="@+id/buttonEntrar"
+        android:layout_below="@+id/buttonEntrar"
+        android:layout_marginTop="17dp"
+        android:backgroundTint="@color/colorAccent"
+        android:focusedByDefault="false"
+        android:onClick="Register"
+        android:text="Registrar"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+</RelativeLayout>
