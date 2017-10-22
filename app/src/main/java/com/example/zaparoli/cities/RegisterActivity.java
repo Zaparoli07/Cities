@@ -60,12 +60,10 @@ public class RegisterActivity extends AppCompatActivity {
                 String password = editTextSenha.getText().toString().trim();
 
                 if(TextUtils.isEmpty(email)){
-                    //Email is Empty
                     Toast.makeText(this, "Informe seu E-mail", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if(TextUtils.isEmpty(password)){
-                    //Password is Empty
                     Toast.makeText(this, "Informe sua Senha", Toast.LENGTH_SHORT).show();
                     return;
                 }

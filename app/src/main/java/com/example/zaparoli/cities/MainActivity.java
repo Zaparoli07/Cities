@@ -1,5 +1,6 @@
 package com.example.zaparoli.cities;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.nfc.Tag;
 import android.support.annotation.NonNull;
@@ -23,12 +24,16 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth.AuthStateListener mAuthListener;
 
+    private ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         mAuth = FirebaseAuth.getInstance();
+
+        progressDialog = new ProgressDialog(this);
 
         //BOTÃO LOGIN
         Button buttonEntrar = (Button) findViewById(R.id.buttonEntrar);
@@ -66,12 +71,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
+
+                    progressDialog.setMessage("Aguarde...");
+                    progressDialog.show();
+
                     Toast.makeText(MainActivity.this, "Login Efetuado", Toast.LENGTH_SHORT).show();
 
                     Intent it = new Intent(MainActivity.this, MapsActivity.class);
                     startActivity(it);
+
+                    progressDialog.dismiss();
                 } else {
-                    Toast.makeText(MainActivity.this, "E-mail ou Senha Incorreto", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "E-mail ou Senha Incorretos", Toast.LENGTH_SHORT).show();
                 }
             }
         });
