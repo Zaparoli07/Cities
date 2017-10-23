@@ -4,56 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.zaparoli.cities.RegisterActivity">
+    android:background="@drawable/imagem"
 
-    <TextView
-        android:id="@+id/textViewNome"
+    tools:context="com.example.zaparoli.cities.RegisterActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <EditText
+        android:id="@+id/editTextNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/layout_text"
+        android:ems="10"
+        android:inputType="textPersonName"
         android:text="Nome"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="30dp"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewSobrenome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sobrenome"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/background_light"
+        android:paddingLeft="10dp"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toTopOf="@+id/editTextSobrenome"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="26dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewEmail"
+    <EditText
+        android:id="@+id/editTextSobrenome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
-        tools:layout_constraintRight_creator="1"
+        android:background="@drawable/layout_text"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:inputType="textPersonName"
+        android:text="Sobrenome"
+        android:textColor="@android:color/background_light"
+
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
-        app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        android:layout_marginBottom="24dp"
+        app:layout_constraintLeft_toLeftOf="@+id/editTextNome" />
 
-    <TextView
-        android:id="@+id/textViewSenha"
+    <EditText
+        android:id="@+id/editTextEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Senha"
+        android:background="@drawable/layout_text"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:inputType="textEmailAddress"
+        android:text="E-mail"
+        android:textColor="@android:color/background_light"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
         app:layout_constraintBottom_toTopOf="@+id/editTextSenha"
-        app:layout_constraintRight_toRightOf="@+id/editTextSenha"
-        app:layout_constraintLeft_toLeftOf="@+id/editTextSenha" />
+        app:layout_constraintRight_toRightOf="@+id/editTextSobrenome"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintLeft_toLeftOf="@+id/editTextSobrenome" />
+
+    <EditText
+        android:id="@+id/editTextSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_text"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:inputType="textPassword"
+        android:text="Senha"
+        android:textColor="@android:color/background_light"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRegistrar"
+        app:layout_constraintRight_toRightOf="@+id/editTextEmail"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="57dp"
+        app:layout_constraintLeft_toLeftOf="@+id/editTextEmail" />
 
     <Button
         android:id="@+id/buttonRegistrar"
@@ -61,67 +88,26 @@
         android:layout_height="wrap_content"
         android:onClick="Registrar"
         android:text="Registrar"
-        tools:layout_constraintTop_creator="1"
+        android:background="@drawable/layout_button2"
         tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="23dp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSenha" />
-
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/editTextSobrenome"
-        android:layout_marginTop="21dp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSobrenome"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/editTextSobrenome" />
-
-    <EditText
-        android:id="@+id/editTextNome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNome"
-        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="33dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextSobrenome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="121dp"
+        android:layout_height="103dp"
+        app:srcCompat="@drawable/icon"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/editTextNome"
-        android:layout_marginTop="34dp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNome"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/editTextNome" />
-
-    <EditText
-        android:id="@+id/editTextSenha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/editTextEmail"
-        android:layout_marginTop="33dp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/editTextEmail" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
