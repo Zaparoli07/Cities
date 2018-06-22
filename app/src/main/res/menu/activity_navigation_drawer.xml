@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_action_map"
+            android:title="Mapa" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_action_dados"
+            android:title="Meus Dados" />
+    </group>
+
+    <item android:title="Info">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_action_info"
+                android:title="Sobre" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_action_sair"
+                android:title="Sair" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,8 +1,84 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.zaparoli.cities.MapsActivity" />
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context="com.example.zaparoli.cities.MapsActivity" />
+
+    <Button
+        android:id="@+id/Buraco"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/roadicon100px"
+        app:layout_constraintBottom_toBottomOf="@+id/Vazamento"
+        app:layout_constraintEnd_toStartOf="@+id/Vazamento"
+        app:layout_constraintStart_toEndOf="@+id/Lixo"
+        app:layout_constraintTop_toTopOf="@+id/Vazamento"
+        android:layout_marginRight="10dp" />
+
+    <Button
+        android:id="@+id/Dengue"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="113dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/mosquitoicon100px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Vazamento"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="113dp" />
+
+    <Button
+        android:id="@+id/Vazamento"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/vazamentoicon100px"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Dengue"
+        app:layout_constraintEnd_toStartOf="@+id/Dengue"
+        app:layout_constraintStart_toEndOf="@+id/Buraco"
+        android:layout_marginRight="8dp" />
+
+    <Button
+        android:id="@+id/Lixo"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="9dp"
+        android:layout_marginStart="112dp"
+        android:background="@drawable/lixoicon100px"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Buraco"
+        app:layout_constraintEnd_toStartOf="@+id/Buraco"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginRight="9dp"
+        android:layout_marginLeft="112dp" />
+
+
+</android.support.constraint.ConstraintLayout>
